@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <servlet>
+    <servlet-name>DaoProviderInit</servlet-name>
+    <servlet-class>
+  	 	com.vyon.common.DaoProviderInit
+  	</servlet-class>
+    <init-param>
+      <param-name>dbms</param-name>
+      <param-value>oracle</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>FrontController</servlet-name>
+    <servlet-class>com.vyon.controller.FrontController</servlet-class>
+    <init-param>
+      <param-name>configFile</param-name>
+      <param-value>
+      	/WEB-INF/commandURI.properties
+      </param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>FrontController</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>main/index.do</welcome-file>
+  </welcome-file-list>
+  
+  <filter>
+  <filter-name>LoginCheck</filter-name>
+  <filter-class>com.vyon.filter.LoginCheckFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  <filter-name>LoginCheck</filter-name>
+  <url-pattern>/cart/*</url-pattern>
+  <url-pattern>/mypage/*</url-pattern>
+  <url-pattern>/member/member3.do</url-pattern>
+  <url-pattern>/member/withdraw.do</url-pattern>
+  <url-pattern>/order/customerList.do</url-pattern>
+  <url-pattern>/member/withdraw.do</url-pattern>
+  </filter-mapping>
+  
+ <filter>
+  <filter-name>LoginAdminCheck</filter-name>
+  <filter-class>com.vyon.filter.LoginAdminCheckFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  <filter-name>LoginAdminCheck</filter-name>
+  <url-pattern>/admin/*</url-pattern>
+    <url-pattern>/order/adminList.do  </url-pattern>
+  <url-pattern>/goods/admin_list.do</url-pattern>
+     <url-pattern> /goods/admin_write.do  </url-pattern>
+  </filter-mapping>
+  
+  
+  
+</web-app>

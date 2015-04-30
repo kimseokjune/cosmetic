@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Context>
+<Context>
+ <Resource name="jdbc/OracleDB"
+  auth="Container"
+  type="javax.sql.DataSource"
+  username="cosmetic"
+  password="cosmetic"
+  driverClassName="oracle.jdbc.driver.OracleDriver"
+  factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
+  url="jdbc:oracle:thin:@211.183.7.63:1521:orcl"
+  maxActive="500"
+  maxIdle="100"/>
+</Context>

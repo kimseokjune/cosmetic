@@ -1,0 +1,15 @@
+.layer_box_effect
+{
+background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(252,252,252,0.19)), to(rgba(191,191,191,0.19)), color-stop(3%, rgba(247,247,247,0.19)), color-stop(12%, rgba(242,242,242,0.19)), color-stop(90%, rgba(217,217,217,0.19)));
+background-image: -webkit-linear-gradient(top, rgba(252,252,252,0.19), rgba(247,247,247,0.19) 3%, rgba(242,242,242,0.19) 12%, rgba(217,217,217,0.19) 90%, rgba(191,191,191,0.19));
+background-image: -moz-linear-gradient(top, rgba(252,252,252,0.19), rgba(247,247,247,0.19) 3%, rgba(242,242,242,0.19) 12%, rgba(217,217,217,0.19) 90%, rgba(191,191,191,0.19));
+background-image: -o-linear-gradient(top, rgba(252,252,252,0.19), rgba(247,247,247,0.19) 3%, rgba(242,242,242,0.19) 12%, rgba(217,217,217,0.19) 90%, rgba(191,191,191,0.19));
+background-image: -ms-linear-gradient(top, rgba(252,252,252,0.19), rgba(247,247,247,0.19) 3%, rgba(242,242,242,0.19) 12%, rgba(217,217,217,0.19) 90%, rgba(191,191,191,0.19));
+background-image: linear-gradient(to bottom, rgba(252,252,252,0.19), rgba(247,247,247,0.19) 3%, rgba(242,242,242,0.19) 12%, rgba(217,217,217,0.19) 90%, rgba(191,191,191,0.19));
+-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+-moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+box-shadow: 0 0 3px rgba(0,0,0,0.3);
+
+
+border-radius: 4px;
+}
